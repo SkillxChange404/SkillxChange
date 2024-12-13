@@ -11,24 +11,28 @@ const App = () => {
   const handleSignUp = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:5000', {
+      const response = await fetch('http://localhost:5000/user', {  // Use the correct /signup endpoint
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({ firstName, lastName, email, password }),
       });
+  
       const data = await response.json();
-      if (data.success) {
+      if (response.ok) {
         alert('Sign up successful');
       } else {
-        alert('Sign up failed');
+        alert('Sign up failed: ' + data.message);
       }
     } catch (error) {
       console.error('Error:', error);
       alert('An error occurred');
     }
   };
+  
+  
+  
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -54,8 +58,6 @@ const App = () => {
 
   return (
     <div className="main">
-      <input type="checkbox" id="chk" aria-hidden="true" />
-      
       {/* Signup Form */}
       {isLogin ? (
         <div className="signup">
