@@ -1,7 +1,7 @@
 // App.tsx
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
-import './App.css'; // Import your main CSS for styling
+import './App.css';
 import SignUp from './signup'; // Import the SignUp component
 import Login from './login'; // Import the Login component
 import ProfilePage from './profilepage';

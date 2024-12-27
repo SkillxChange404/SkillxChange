@@ -54,8 +54,9 @@ const Login: React.FC = () => {
           onChange={(e) => setPassword(e.target.value)}
         />
         <a href="#">Forgot password?</a>
-        <button type="submit" className="btn">Login</button>
+        <button type="submit">Login</button>
       </form>
+      <button onClick={() => navigate('/signup')}>Don't have an account? Sign Up</button>
     </div>
   );
 };

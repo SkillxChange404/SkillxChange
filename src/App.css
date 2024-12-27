@@ -1,147 +1,94 @@
-/* Global styles */
+/* Global styles for background */
 body {
   margin: 0;
   padding: 0;
+  height: 100vh;
+  background-color: #1d2a44; /* Dark blue background */
+  color: #fff; /* White text */
+  font-family: 'Arial', sans-serif;
+  display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  font-family: 'Jost', sans-serif;
-  background: url('https://media.istockphoto.com/id/1535878692/photo/paint-roller-with-green-stroke-isolated-on-white.jpg?s=2048x2048&w=is&k=20&c=SZV_3NxQ_wJJTl7yBDqa3ZP55d2hj5bRVlvM09djOkw=');
-  display: flex;
-  animation: spin;
-  animation-duration: 3s;
+  overflow: hidden;
 }
 
-@keyframes spin {
-  0% { }
-  50% { scale: 2; }
-  100% { transform: rotate(360deg); border-radius: 50%; }
-}
-
+/* Add subtle shadow to the entire application container */
 .main {
-  width: 350px;
-  height: 550px;
-  background: url('https://www.cm3.com.au/wp-content/uploads/2022/06/2022-06_Cm3-Blog_What-Is-Principal-Contractor.jpg') no-repeat center / cover;
-  border-radius: 10px;
-  box-shadow: 5px 20px 50px rgb(250, 250, 250);
+  width: 80%;
+  max-width: 1200px;
+  min-height: 80vh;
+  background: #2c3e50; /* Darker shade of blue */
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Shadow effect */
+  padding: 30px;
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
-  padding: 20px;
-  background-color: rgba(0, 0, 0, 0.3); /* Optional overlay effect to make the text stand out */
+  align-items: center;
 }
 
-
-#chk {
-  display: none;
-}
-
-.signup, .login {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
-label {
-  color: white;
-  font-size: 2.3em;
-  justify-content: center;
-  display: flex;
-  margin: 60px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.5s ease-in-out;
-}
-
-input {
-  width: 60%;
-  height: 20px;
-  background: rgb(255, 255, 255);
-  justify-content: center;
-  display: flex;
-  margin: 20px auto;
-  padding: 10px;
-  border: none;
-  outline: none;
-  border-radius: 5px;
-}
-
+/* Style for buttons */
 button {
-  width: 60%;
-  height: 40px;
-  margin: 10px auto;
-  justify-content: center;
-  display: block;
-  color: aliceblue;
-  background: rgb(114, 220, 53);
-  font-size: 1em;
-  font-weight: bold;
-  margin-top: 20px;
-  outline: none;
+  background-color: #2980b9; /* Blue background */
+  color: white;
+  padding: 10px 60px;
   border: none;
   border-radius: 5px;
-  transition: 0.2s ease-in-out;
+  font-size: 16px;
   cursor: pointer;
-  animation: pulse 2s infinite;
-
-  position: relative;
-  z-index: 10; /* Brings it to the front */
+  transition: background-color 0.3s ease;
 }
 
-@keyframes pulse {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.05); }
+button:last-of-type {
+  margin-top: 20px; /* Add space above the second button */
 }
 
 button:hover {
-  background: rgb(245, 38, 38);
+  background-color: #3498db; /* Lighter blue on hover */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4); /* Adding shadow on hover */
 }
 
-.login {
-  height: 460px;
-  background: rgb(255, 255, 255) url('https://c8.alamy.com/comp/2MT33W3/contractor-icon-monochrome-simple-sign-from-common-tax-collection-contractor-icon-for-logo-templates-web-design-and-infographics-2MT33W3.jpg');
-  border-radius: 60% / 10%;
-  transform: translateY(-180px);
-  transition: 0.8s ease-in-out;
-}
-
-.login label {
-  color: purple;
-  transform: scale(0.6);
-}
-
-#chk:checked ~ .login {
-  transform: translateY(-500px);
-}
-
-#chk:checked ~ .login label {
-  transform: scale(1);
-}
-
-#chk:checked ~ .signup label {
-  transform: scale(0.6);
-}
-
-
-/* Input fields styling */
+/* Input fields style */
 input {
-  width: 60%;
-  height: 40px;
-  background: #ececec; /* Lighter background for better visibility */
-  color: #020202; /* White text color */
-  justify-content: center;
-  display: flex;
-  margin: 20px auto;
-  padding: 10px;
-  border: 1px solid #f0dfdf; /* Add a border to make the input more distinct */
-  outline: none;
+  background-color: #34495e; /* Dark grayish-blue background */
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  margin: 10px 0;
   border-radius: 5px;
-  font-size: 1em; /* Adjust font size */
+  width: 60%;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
 }
 
-/* Focused input styling */
 input:focus {
-  border-color: #646cff; /* Blue border when focused */
-  background-color: #ffffff; /* Slightly darker background */
+  background-color: #2c3e50; /* Darker shade on focus */
+  outline: none;
+  box-shadow: 0 0 5px rgba(41, 128, 185, 0.7); /* Glow effect on focus */
+}
+
+/* Styling for forms and labels */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+label {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #ecf0f1; /* Light grayish color */
+  font-weight: bold;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .main {
+    width: 90%;
+    padding: 20px;
+  }
+
+  input, button {
+    width: 80%;
+  }
 }

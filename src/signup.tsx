@@ -79,6 +79,7 @@ const SignUp: React.FC = () => {
         />
         <button type="submit">Sign Up</button>
       </form>
+      <button onClick={() => navigate('/login')}>Already have an account? Login</button>
     </div>
   );
 };
