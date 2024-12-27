@@ -1,136 +1,57 @@
-import React, { useState } from 'react';
-import './App.css';
+// App.tsx
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+import './App.css'; // Import your main CSS for styling
+import SignUp from './signup'; // Import the SignUp component
+import Login from './login'; // Import the Login component
+import ProfilePage from './profilepage';
+// import HomePage from './HomePage';
 
-const App = () => {
-  const [isLogin, setIsLogin] = useState(true);
-  const [firstName, setFirstName] = useState('');
-  const [lastName, setLastName] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
 
-  const handleSignUp = async (e: React.FormEvent) => {
-    e.preventDefault();
-    try {
-      const response = await fetch('http://localhost:5000', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ firstName, lastName, email, password }),
-      });
-      const data = await response.json();
-      if (data.success) {
-        alert('Sign up successful');
-      } else {
-        alert('Sign up failed');
-      }
-    } catch (error) {
-      console.error('Error:', error);
-      alert('An error occurred');
-    }
-  };
+// const App: React.FC = () => {
+//   const [isLogin, setIsLogin] = useState<boolean>(true); // Track if it's in Login mode or SignUp mode
 
-  const handleLogin = async (e: React.FormEvent) => {
-    e.preventDefault();
-    try {
-      const response = await fetch('http://localhost:5000/login', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ email, password }),
-      });
-      const data = await response.json();
-      if (data.success) {
-        alert('Login successful');
-      } else {
-        alert('Login failed');
-      }
-    } catch (error) {
-      console.error('Error:', error);
-      alert('An error occurred');
-    }
-  };
-
-  return (
-    <div className="main">
-      <input type="checkbox" id="chk" aria-hidden="true" />
+//   return (
+//     <div className="main">
+//       <input type="checkbox" id="chk" aria-hidden="true" />
       
-      {/* Signup Form */}
-      {isLogin ? (
-        <div className="signup">
-          <form onSubmit={handleSignUp}>
-            <label htmlFor="chk" aria-hidden="true">
-              SkillX
-            </label>
-            <input
-              type="text"
-              name="txt"
-              placeholder="First Name"
-              required
-              value={firstName}
-              onChange={(e) => setFirstName(e.target.value)}
-            />
-            <input
-              type="text"
-              name="txt"
-              placeholder="Last Name"
-              required
-              value={lastName}
-              onChange={(e) => setLastName(e.target.value)}
-            />
-            <input
-              type="email"
-              name="email"
-              placeholder="Email"
-              required
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
-            <input
-              type="password"
-              name="pswd"
-              placeholder="Password"
-              required
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
-            <button type="submit" className="btn">Sign Up</button>
-          </form>
-        </div>
-      ) : (
-        /* Login Form */
-        <div className="login">
-          <form onSubmit={handleLogin}>
-            <label htmlFor="chk" aria-hidden="true">
-              Login
-            </label>
-            <input
-              type="email"
-              name="email"
-              placeholder="Email"
-              required
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
-            <input
-              type="password"
-              name="paswd"
-              placeholder="Password"
-              required
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
-            <a href="#">Forgot password?</a>
-            <button type="submit" className="btn">Login</button>
-          </form>
-        </div>
-      )}
+//       {/* Conditional Rendering */}
+//       {isLogin ? (
+//         <Login /> // Render Login component when in login mode
+//       ) : (
+//         <SignUp /> // Render SignUp component when in sign up mode
+//       )}
 
-      <button onClick={() => setIsLogin(!isLogin)} className="btn">
-        {isLogin ? 'Switch to Sign Up' : 'Switch to Login'}
-      </button>
-    </div>
+//       <button onClick={() => setIsLogin(!isLogin)} className="btn">
+//         {isLogin ? 'Switch to Sign Up' : 'Switch to Login'}
+//       </button>
+//     </div>
+//   );
+// };
+
+// export default App;
+const App: React.FC = () => {
+  return (
+    <Router>
+      <div className="main">
+        <Routes>
+          {/* Route for Login */}
+          <Route path="/login" element={<Login />} />
+
+          {/* Route for Sign Up */}
+          <Route path="/signup" element={<SignUp />} />
+
+          {/* Route for Profile Page */}
+          <Route path="/profile" element={<ProfilePage />} />
+
+          {/* Route for Home Page */}
+          {/* <Route path="/home" element={<HomePage />} /> */}
+
+          {/* Default route */}
+          <Route path="/" element={<Navigate to="/login" />} />
+        </Routes>
+      </div>
+    </Router>
   );
 };
 
