@@ -62,6 +62,7 @@ header {
 nav {
   display:flex;
   justify-content: space-between;
+  
 }
 nav.scrolled {
   background: rgb(9, 5, 35);
@@ -81,9 +82,10 @@ nav p {
 
 nav ul {
   display: flex;
-  align-items: center;
-  gap: 60px;
+  align-items:center;
+  gap: 150px;
   list-style: none;
+ 
 }
 
 nav ul li a {
@@ -92,6 +94,7 @@ nav ul li a {
   font-size: 16px;
   color: white;
   text-decoration: none;
+  padding: 120px;
 
 }
 
@@ -150,6 +153,10 @@ nav ul li a {
 
 }
 
+.state-cards p {
+  color: azure;
+}
+
 .state-cards .content {
   border-radius: 24px;
   background-color: white;
@@ -175,7 +182,7 @@ h2 {
 }
 
 h2.light {
-  color: black;
+  color: rgb(0, 0, 0);
 }
 
 section p {
@@ -452,5 +459,9 @@ footer form .submit-btn {
   border-radius: 8px;
   padding: 8px 32px;
   border: 0
+}
+
+.wrapper .scrolled .logo img {
+  opacity: 50%;
 }
 
