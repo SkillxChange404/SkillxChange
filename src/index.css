@@ -206,7 +206,7 @@ section p {
 
 .testimonials-section {
   display: flex;
-  gap: 100px;
+  gap: 500px;
   align-items: center;
 }
 
@@ -296,7 +296,7 @@ section p {
 
 .our-services .course-cards {
   display: flex;
-  gap: 190px;
+  gap: 240px;
 
 }
 
