@@ -1,33 +1,39 @@
-/* Global styles for background */
-body {
-  margin: 0;
-  padding: 0;
-  height: 100vh;
-  background-color: #1d2a44; /* Dark blue background */
-  color: #fff; /* White text */
-  font-family: 'Arial', sans-serif;
+:root {
+  --orange-color: rgb(238, 164, 25);
+  --dark-blue-color: rgb(3, 3, 47);
+  --dark-color: black;
+  --light-color: white;
+  --light-blue-color: rgb(79, 42, 246);
+}
+
+
+.landing-page {
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
+  height: 140vh;
+  background: linear-gradient(180deg, rgb(8, 8, 86) 0%, black 100%);
+  color: var(--light-color);
+  font-family: "Poppins", sans-serif;
 }
 
 /* Add subtle shadow to the entire application container */
-.main {
-  width: 80%;
-  max-width: 1200px;
-  min-height: 80vh;
-  background: #2c3e50; /* Darker shade of blue */
+.landing-page .main {
+  width: 100%;
+  max-width: 400px;
+  padding: 40px;
+  background: var(--dark-blue-color);
   border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Shadow effect */
-  padding: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 
+
 /* Style for buttons */
-button {
+.landing-page button {
   background-color: #2980b9; /* Blue background */
   color: white;
   padding: 10px 60px;
@@ -38,43 +44,43 @@ button {
   transition: background-color 0.3s ease;
 }
 
-button:last-of-type {
+.landing-page button:last-of-type {
   margin-top: 20px; /* Add space above the second button */
 }
 
-button:hover {
+.landing-page button:hover {
   background-color: #3498db; /* Lighter blue on hover */
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4); /* Adding shadow on hover */
 }
 
 /* Input fields style */
-input {
+.landing-page input {
   background-color: #34495e; /* Dark grayish-blue background */
   color: white;
   border: none;
   padding: 12px 20px;
   margin: 10px 0;
   border-radius: 5px;
-  width: 60%;
+  width: 100%;
   font-size: 16px;
   transition: background-color 0.3s ease;
 }
 
-input:focus {
+.landing-page input:focus {
   background-color: #2c3e50; /* Darker shade on focus */
   outline: none;
   box-shadow: 0 0 5px rgba(41, 128, 185, 0.7); /* Glow effect on focus */
 }
 
 /* Styling for forms and labels */
-form {
+.landing-page form {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
 }
 
-label {
+.landing-page label {
   font-size: 18px;
   margin-bottom: 15px;
   color: #ecf0f1; /* Light grayish color */
@@ -92,3 +98,5 @@ label {
     width: 80%;
   }
 }
+
+

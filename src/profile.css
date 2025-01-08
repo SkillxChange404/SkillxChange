@@ -1,0 +1,64 @@
+:root {
+  --orange-color: rgb(238, 164, 25); 
+  --dark-blue-color: rgb(3, 3, 47);
+  --light-blue-color: rgb(79, 42, 246);
+  --dark-color: black;
+  --light-color: white;
+  --breadcrumb-bg: var(--light-blue-color);
+  --text-muted-color: rgb(200, 200, 200);
+  --card-bg: #34495e; /* Similar to login input background */
+  --avatar-size: 150px;
+  --card-border-radius: 10px;
+  --section-padding: 20px 0;
+}
+
+/* Scoped styles for the profile page */
+.profile-page {
+  background-color: var(--dark-blue-color);
+  color: var(--light-color);
+  padding: var(--section-padding);
+  min-height: 100vh; /* Ensure the page fills the viewport */
+}
+
+.profile-page .profile-breadcrumb {
+  background-color: var(--breadcrumb-bg);
+  border-radius: var(--card-border-radius);
+  padding: 15px;
+  margin-bottom: 20px;
+  color: var(--light-color);
+}
+
+.profile-page .profile-card {
+  margin-bottom: 20px;
+  background-color: var(--card-bg);
+  border-radius: var(--card-border-radius);
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  color: var(--light-color);
+}
+
+.profile-page .profile-avatar {
+  width: var(--avatar-size);
+  border-radius: 50%;
+  margin: 0 auto 15px; /* Center the avatar */
+  display: block;
+}
+
+.profile-page .profile-job-title,
+.profile-page .profile-location {
+  margin: 10px 0;
+  text-align: center;
+  color: var(--light-color);
+}
+
+.profile-page .profile-details-card {
+  padding: 20px;
+  background-color: var(--card-bg);
+  border-radius: var(--card-border-radius);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  color: var(--light-color);
+}
+
+.profile-page .text-muted {
+  color: var(--text-muted-color) !important;
+}
