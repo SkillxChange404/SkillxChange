@@ -1,0 +1,96 @@
+/* Override global styles for AboutUs page */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Apply a fresh background for the About Us page */
+.about-us-page-container {
+  background: linear-gradient(to bottom, black, #0066cc); /* Black to blue gradient */
+  min-height: 100vh; /* Ensure full page height */
+  padding: 0 20px;
+  color: white;
+}
+
+/* Remove conflicting header height from About Us page */
+header {
+  background: linear-gradient(180deg, rgb(8, 8, 86) 0%, black 100%);
+  height: auto; /* Remove fixed height for header */
+  width: 100%;
+  position: relative; /* Ensure it's contained */
+  padding-bottom: 30px;
+}
+
+/* Prevent black box or fixed background from interfering */
+.about-us-page-container > header {
+  z-index: 1; /* Ensure content appears on top of background */
+}
+
+/* Additional specific styles for About Us content */
+.about-header {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.about-header h1 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  color: white;
+  font-size: 2.5rem;
+}
+
+.about-content {
+  margin-top: 40px;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.about-content p {
+  font-size: 1.2rem;
+  color: white;
+  line-height: 1.6;
+}
+
+.home-button {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 30px;
+  width: 100%;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.home-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.home-button:focus {
+  outline: none;
+}
+
+.about-image-container {
+  display: flex;
+  justify-content: center;  /* Center the image horizontally */
+  align-items: center;      /* Center the image vertically */
+  width: 100%;
+  margin-top: 30px;  /* Fallback color to check visibility */
+  min-height: 400px;          /* Ensure there's space to show the image */
+}
+
+.about-image-container img {
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
+  width: auto;
+  object-fit: cover;  /* Optional: makes the image cover the space without stretching */
+}

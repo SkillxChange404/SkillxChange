@@ -12,21 +12,9 @@ const HomePage: React.FC = () => {
           <nav className="anim">
             <div className="logo">
               <img src="/src/images/skillx.png" alt="Logo" width="200px" />
-              <p className="anim">show GRIT</p>
+              <p className="anim"></p>
             </div>
             <ul>
-              <li>
-                <button onClick={() => navigate('/search')}>Xchange</button>
-              </li>
-              <li>
-                <button onClick={() => navigate('/post')}>Post</button>
-              </li>
-              <li>
-                <button onClick={() => navigate('/services')}>Services</button>
-              </li>
-              <li>
-                <button onClick={() => navigate('/profile')}>Profile</button>
-              </li>
               <li>
                 <button onClick={() => navigate('/login')} className="btn dark">
                   Login/Signup
@@ -37,14 +25,10 @@ const HomePage: React.FC = () => {
           <div className="hero-section">
             <div className="left">
               <h1 className="anim">
-                Your skills define
-                <br />
+                Let your skills define<br />
                 You
               </h1>
-              <p className="anim">A new way to innovate the Future.</p>
-              <button className="btn light enroll-icon" onClick={() => navigate('/learnmore')}>
-                Learn More
-              </button>
+             
             </div>
             <div className="right">
               <img src="/img/testimonials.webp" alt="Testimonials" width="600px" className="anim" />
@@ -52,16 +36,16 @@ const HomePage: React.FC = () => {
             <div className="state-cards">
               <div className="state-card state-map">
                 <div>
-                  <h3 className="anim">50 States</h3>
-                  <p className="anim">Available In</p>
+                  <h3 className="anim">Available In</h3>
+                  <p className="anim">50 States</p>
                 </div>
               </div>
               <div className="state-card overall-rating">
                 <div>
-                  <h3 className="anim">4.4</h3>
+                  <h3 className="anim">4.8</h3>
                   <i className="bx bx-star"></i>
                 </div>
-                <p className="anim">Overall Rating</p>
+                <p className="anim">Overall rating by our customers</p>
               </div>
             </div>
           </div>
@@ -97,7 +81,7 @@ const HomePage: React.FC = () => {
       </section>
       <footer>
         <div className="wrapper">
-          <p className="copyright">This website is developed by SkillChange © 2024</p>
+          <p className="copyright">This website is developed by SkillXChange © 2025</p>
         </div>
       </footer>
     </div>

@@ -1,0 +1,108 @@
+.contact-container {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column; /* Stack the content vertically */
+    align-items: center;
+    justify-content: center; /* Center the form */
+    padding: 20px;
+    background: linear-gradient(to bottom, black, #0066cc); /* Black to blue gradient */
+    color: white; /* White text to contrast with the dark background */
+    z-index: 0;
+  }
+  
+  .contact-container img {
+    position: absolute; /* Keep the logo in the background */
+    top: 50%; /* Center the logo vertically */
+    left: 50%; /* Center the logo horizontally */
+    transform: translate(-50%, -50%); /* Ensure perfect centering */
+    z-index: -1; /* Ensure the logo stays behind the form */
+    max-width: 100%; /* Adjust size of the logo to be responsive */
+    height: auto;
+  }
+  
+  .contact-form-wrapper {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+    backdrop-filter: blur(5px); /* Optional: Frosted glass effect */
+    padding: 30px;
+    border-radius: 15px;
+    border: 2px solid #007bff; /* Stylish border for a tech look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    max-width: 600px;
+    width: 100%;
+    z-index: 1; /* Ensure the form is above the background */
+  }
+  
+  .contact-form-wrapper h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Roboto', sans-serif; /* Modern font */
+    font-weight: 700; /* Bold heading */
+    color: #007bff; /* Primary color */
+    text-transform: uppercase;
+  }
+  
+  .contact-form-wrapper label {
+    font-family: 'Poppins', sans-serif; /* Fun, modern font */
+    font-weight: 600; /* Bold labels */
+    color: #333333;
+    font-size: 1.1rem;
+  }
+  
+  .contact-form-wrapper input,
+  .contact-form-wrapper textarea {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    color: #333333;
+    border: 2px solid #007bff;
+    border-radius: 8px;
+    padding: 10px;
+  }
+  
+  .contact-form-wrapper button {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .contact-form-wrapper button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+    cursor: pointer;
+  }
+  
+  .contact-form-wrapper input:focus,
+  .contact-form-wrapper textarea:focus {
+    outline: none;
+    border-color: #0056b3;
+    box-shadow: 0 0 5px rgba(0, 91, 179, 0.5);
+  }
+  
+  .contact-form-wrapper textarea {
+    resize: none;
+  }
+  
+  .contact-footer {
+    background-color: rgba(255, 255, 255, 0.8); /* Same semi-transparent white */
+    position: absolute;
+    bottom: 0; /* Position at the bottom of the page */
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    border-top: 1px solid #ddd;
+    z-index: 1; /* Ensure it's above other content */
+  }
+  
+  .footer-content p {
+    font-size: 20px;
+    color: #555;
+    margin: 0;
+  }
+  
