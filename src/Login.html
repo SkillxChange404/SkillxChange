@@ -7,13 +7,17 @@
 <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
-
+    <div class="anim">
+        <h1>SkillXChange
+        </h1>
+    </div>
+ 
     <div class="main">
         <input type="checkbox" id="chk" aria-hidden="true">
 
         <div class="signup"> <!--Sign up-->
             <form>
-                <label for="chk" aria-hidden="true">SkillX</label>
+                <label for="chk" aria-hidden="true"></label>
                 <input type="text" name="txt" placeholder="First Name" required="">
                 <input type="text" name="txt" placeholder="Last Name" required="">
                 <input type="email" name="email" placeholder="Email" required="">
@@ -40,7 +44,7 @@
                     align-items: center;
                     min-height: 100vh;
                     font-family: 'Jost', sans-serif;
-                    background: url('https://media.istockphoto.com/id/1535878692/photo/paint-roller-with-green-stroke-isolated-on-white.jpg?s=2048x2048&w=is&k=20&c=SZV_3NxQ_wJJTl7yBDqa3ZP55d2hj5bRVlvM09djOkw=');
+                    background-color: rgb(3, 5, 86);
                     display: flex;
                     animation: spin;
                     animation-duration: 3s;
@@ -78,7 +82,7 @@
                     height: 500px;
                     background: red;
                     overflow: hidden;
-                    background: url('https://www.cm3.com.au/wp-content/uploads/2022/06/2022-06_Cm3-Blog_What-Is-Principal-Contractor.jpg') no-repeat center / cover;
+                    background: url('https://biblus.accasoftware.com/en/wp-content/uploads/sites/2/2022/10/artificial-intelligence-in-construction.jpg') no-repeat center / cover;
                     border-radius: 10px;
                     box-shadow: 5px 20px 50px rgb(250, 250, 250)
                 }
@@ -120,7 +124,7 @@
                 }
 
                 button {
-                    width: 60%;
+                    width: 100%;
                     height: 40px;
                     margin: 10px auto;
                     justify-content: center;
@@ -136,6 +140,8 @@
                     transition: .2s ease-in-out;
                     cursor: pointer;
                     animation: pulse 2s infinite;
+                    justify-content: center;
+                  
                 }
 
                 @keyframes pulse{
@@ -175,9 +181,18 @@
                     transform: scale(.6);
                 }
 
+                .banner {
+                    justify-self:left;
+                }
+
+                .anim h1 {
+                    color:rgb(255, 255, 255);
+                    text-align: left;
+                    position:fixed
+                }
+
 
             </style>
-            <button>Login</button>
 
             </form>
         </div>
