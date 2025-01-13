@@ -111,6 +111,7 @@ const Contact: React.FC = () => {
       <footer className="contact-footer">
         <div className="footer-content">
           <p>
+            We are dedicated to delivering the best solutions for our customers.
             We sincerely appreciate all of our customers. Your feedback and
             support are what make SkillXChange the thriving platform it is today.
             Together, we're building a stronger community. Thank you for being

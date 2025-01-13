@@ -1,8 +1,7 @@
 import React from "react";
 import "./AboutUs.css"; // Import new CSS styles
 import { useNavigate } from "react-router-dom";
-import aboutUs from './images/aboutUs.jpg';
-
+import aboutUs from './images/aboutUs.jpg'; // Import the image properly
 
 const AboutUs = () => {
   const navigate = useNavigate();
@@ -13,17 +12,15 @@ const AboutUs = () => {
 
   return (
     <div className="about-us-page-container">
-  <header className="about-header">
-    <h1>About SkillXChange</h1>
-  </header>
+      <header className="about-header">
+        <h1>About SkillXChange</h1>
+      </header>
 
-  <div className="about-image-container">
-    <img src="./images/aboutUs.jpg" alt="About SkillXChange"
-    onError={(e) => console.error('Image failed to load:', e)}
-     />
-  </div>
+      <div className="about-image-container">
+        <img src={aboutUs} alt="About SkillXChange" onError={(e) => console.error('Image failed to load:', e)} />
+      </div>
 
-  <main className="about-content">
+      <main className="about-content">
         <p>
           SkillXChange was born from a bold vision shared by four tech interns. 
           In the midst of their residency program, they envisioned a groundbreaking 

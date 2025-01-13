@@ -12,40 +12,36 @@ body {
   color: white;
 }
 
-/* Remove conflicting header height from About Us page */
+/* Ensure the header stays on top */
 header {
   background: linear-gradient(180deg, rgb(8, 8, 86) 0%, black 100%);
-  height: auto; /* Remove fixed height for header */
   width: 100%;
-  position: relative; /* Ensure it's contained */
-  padding-bottom: 30px;
-}
-
-/* Prevent black box or fixed background from interfering */
-.about-us-page-container > header {
-  z-index: 1; /* Ensure content appears on top of background */
-}
-
-/* Additional specific styles for About Us content */
-.about-header {
+  position: relative; /* Ensure it's contained and can overlay correctly */
+  padding: 30px 0;
   text-align: center;
-  margin-top: 50px;
+  z-index: 100; /* Ensure it's above everything else */
 }
 
+/* Ensure the header text is visible */
 .about-header h1 {
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
   color: white;
-  font-size: 2.5rem;
+  font-size: 3rem;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Subtle shadow to make text stand out */
+  position: relative;
+  z-index: 200; /* Make sure the header text stays on top */
 }
 
+/* Additional specific styles for About Us content */
 .about-content {
   margin-top: 40px;
   max-width: 800px;
   width: 100%;
   margin: 0 auto;
   padding: 20px;
-  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+  background-color: rgba(0, 0, 0, 0.6); /* Darker background for better contrast */
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
@@ -56,6 +52,7 @@ header {
   line-height: 1.6;
 }
 
+/* Button styles */
 .home-button {
   font-size: 1.1rem;
   font-weight: 600;
@@ -66,6 +63,7 @@ header {
   padding: 12px 30px;
   width: 100%;
   transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 20px;
 }
 
 .home-button:hover {
@@ -78,13 +76,14 @@ header {
   outline: none;
 }
 
+/* Image styles */
 .about-image-container {
   display: flex;
   justify-content: center;  /* Center the image horizontally */
   align-items: center;      /* Center the image vertically */
   width: 100%;
-  margin-top: 30px;  /* Fallback color to check visibility */
-  min-height: 400px;          /* Ensure there's space to show the image */
+  margin-top: 30px;
+  min-height: 400px; /* Ensure there's space to show the image */
 }
 
 .about-image-container img {

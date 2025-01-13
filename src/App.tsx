@@ -34,10 +34,10 @@ import Login from './login';
 import ProfilePage from './profilepage';
 import CreateProfile from './createprofile';
 import HomePage from './homepage';
-import SearchListing from './searchlisting';
 import AboutUs from './AboutUs';
 import Contact from './contact';
 import "bootstrap/dist/css/bootstrap.min.css";
+import SearchPage from './searchpage';
 
 const App: React.FC = () => {
   
@@ -50,7 +50,7 @@ const App: React.FC = () => {
           <Route path="/signup" element={<SignUp />} />
           <Route path="/profile/createprofile" element={<CreateProfile />} />
           <Route path="/profile" element={<ProfilePage />} />
-          <Route path="/search" element={<SearchListing />} />
+          <Route path="/search" element={<SearchPage />} />
           <Route path="/home" element={<HomePage />} /> {/* Additional explicit home route */}
           <Route path="/aboutus" element={<AboutUs />} />
           <Route path="/contact" element={<Contact />} />

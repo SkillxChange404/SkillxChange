@@ -1,5 +1,5 @@
 :root {
-  --orange-color: rgb(238, 164, 25); 
+  --orange-color: rgb(238, 164, 25);
   --dark-blue-color: rgb(3, 3, 47);
   --light-blue-color: rgb(79, 42, 246);
   --dark-color: black;
@@ -14,7 +14,7 @@
 
 /* Scoped styles for the profile page */
 .profile-page {
-  background-color: var(--dark-blue-color);
+  background: linear-gradient(to bottom, var(--dark-blue-color), var(--light-blue-color));
   color: var(--light-color);
   padding: var(--section-padding);
   min-height: 100vh; /* Ensure the page fills the viewport */
